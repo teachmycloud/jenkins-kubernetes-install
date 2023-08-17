@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo apt update
 sudo apt install default-jdk -y
 sudo sed -i '3iexport JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64' /etc/profile
