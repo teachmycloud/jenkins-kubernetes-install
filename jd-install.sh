@@ -3,6 +3,7 @@ sudo apt update
 sudo apt install default-jdk -y
 sudo sed -i '3iexport JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64' /etc/profile
 sudo sed -i '4iexport PATH=$JAVA_HOME/bin:$PATH' /etc/profile
+source /etc/profile
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt-get update
